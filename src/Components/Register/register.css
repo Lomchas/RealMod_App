@@ -1,0 +1,99 @@
+.container-register{
+    background: #f6f6f6;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.container-register .form-register{
+    background: #ffffff98;
+    width: 35%;
+    padding: 1rem .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.433);
+    border-radius: 15px;
+}
+
+.container-register .form-register h2{
+    font-size: calc(2rem + 1vw);
+    font-weight: bold;
+    color: #00c194;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.218);
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.container-register .form-register form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.container-register .form-register form input{
+    width: 95%;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0 1rem;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.433);
+    transition: all .3s;
+}
+
+.container-register .form-register form input:focus{
+    transform: scale(1.03);
+}
+
+.container-register .form-register form button{
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.433); 
+    margin: .5rem 0;   
+    color: white;
+    font-weight: bold;
+    font-size: calc(.6rem + 1vw);
+    background: #0aa682;   
+    transition: all .3s; 
+}
+
+.container-register .form-register form button:hover{
+    transform: scale(1.04);
+    cursor: pointer;
+    background: #0ec198;   
+}
+
+.container-register .form-register form button:active{
+    transform: scale(0.9);
+
+}
+
+.container-register .form-register p{
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.container-register .form-register p .link-to-register{
+    text-decoration: none;
+    color: #00c194;
+    transition: all .3s;
+}
+
+.container-register .form-register p .link-to-register:hover{
+    color: #5ff8d4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.604);
+}
