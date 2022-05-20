@@ -1,6 +1,10 @@
 import { Field, Form, Formik } from 'formik'
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
 import * as Yup from 'yup'
+import { actionEmailAndPass, actionRegisterAsync } from '../../Redux/Actions/ActionUsers'
 
 
 
@@ -23,6 +27,9 @@ const LoginSchema = Yup.object().shape({
 
 // ----------------------------------------- Component Register ---------------------------------//
 export const FormikComponentRegister = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
+
     return (
         <Formik
             initialValues={{
@@ -34,6 +41,16 @@ export const FormikComponentRegister = () => {
             validationSchema={signUpSchema}
             onSubmit={values => {
                 console.log(values)
+                dispatch(actionRegisterAsync(values.nombre, values.email, values.pass))
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Has sido registrado',
+                    text: '¡Vamos a iniciar Sesion!',
+                    showConfirmButton: false,
+                    timer: 3000
+                  })
+                navigate('/')
             }}
         >
             {({ errors, touched }) => (
@@ -56,6 +73,7 @@ export const FormikComponentRegister = () => {
 
 // ----------------------------------------- Component Login ---------------------------------//
 export const FormikComponentLogin = () => {
+    const dispatch = useDispatch();
     return (
         <Formik
             initialValues={{
@@ -65,13 +83,22 @@ export const FormikComponentLogin = () => {
             validationSchema={LoginSchema}
             onSubmit={values => {
                 console.log(values)
+                dispatch(actionEmailAndPass(values.email, values.pass))
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Bienvenido RealMod',
+                    text: 'Comencemos',
+                    showConfirmButton: false,
+                    timer: 2000
+                  })
             }}
         >
             {({ errors, touched }) => (
                 <Form>
                     <Field name='email' placeholder='Correo Electronico' type='email' />
                     {errors.email && touched.email ? (<p className='validationMensage'>{errors.email}</p>) : null}
-                    <Field name='pass' placeholder='Contraseña' type='password' />
+                    <Field autoComplete='none' name='pass' placeholder='Contraseña' type='password' />
                     {errors.pass && touched.pass ? (<p className='validationMensage'>{errors.pass}</p>) : null}
                     <button type='submit'>Iniciar</button>
                 </Form>
