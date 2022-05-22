@@ -1,0 +1,78 @@
+.container-card-agent{
+    background: white;
+    width: 260px;
+    position: relative;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.333);
+    transition: all .3s;
+}
+
+.container-card-agent:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.571);
+}
+
+.container-card-agent .container-photo-agent{
+    width: 100%;
+    padding: .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-card-agent .container-photo-agent img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.container-card-agent .container-numb-listing-agent{
+    position: absolute;
+    top: 215px;
+    width: 100%;
+    padding-left: 1.5rem;
+}
+
+
+.container-card-agent .container-numb-listing-agent .listing-agent{
+    background: white;
+    color: #00C194;
+    padding: .4rem;
+    border-radius: 5px;
+    font-size: calc(.2rem + .8vw);
+    font-weight: bold;
+}
+
+
+.container-card-agent .container-info-agent{
+    padding: 0 .8rem .8rem .9rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.container-card-agent .container-info-agent .name-agent{
+    font-size: calc(.4rem + 1vw);
+    font-weight: bold;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+
+.container-card-agent .container-info-agent .name-agency{
+    color: #00C194;
+    font-size: calc(.1rem + 1vw);
+    font-weight: 500;
+}
+
+
+.container-card-agent .container-info-agent .contact-agent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    font-size: calc(.1rem + 1vw);
+}

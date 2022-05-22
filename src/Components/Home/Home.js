@@ -1,4 +1,5 @@
 import React from 'react'
+import Agents from '../Agents/Agents'
 import Destacadas from '../Destacadas/Destacadas'
 import Featured from '../FeaturedListing/Featured'
 import Banner from '../NavBar/Banner/Banner'
@@ -11,6 +12,7 @@ const Home = () => {
       <Banner/>
       <Featured/>
       <Destacadas/>
+      <Agents/>
     </div>
   )
 }
