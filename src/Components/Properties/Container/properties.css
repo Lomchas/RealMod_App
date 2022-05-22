@@ -1,0 +1,33 @@
+.container-properties-all{
+    background: #ececec;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.container-properties-all .title-properties{
+    width: 200px;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.508));
+}
+
+.container-properties-all .container-list-properties{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5rem 2rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.link-cardDetalle{
+    text-decoration: none;
+    color: black;
+}
