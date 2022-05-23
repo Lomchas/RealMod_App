@@ -51,10 +51,10 @@ const Nav = ({setIsActived, isActive}) => {
             <nav>
                 <ul className='list-nav'>
                     <li><NavLink className={(navData) => navData.isActive ? 'item-nav active' : 'item-nav'} to='/*'>Home</NavLink></li>
-                    <li><NavLink className={(navData) => navData.isActive ? 'item-nav active' : 'item-nav'} to='/'>About</NavLink></li>
+                    <li><a href='#about' className='item-nav'>About</a></li>
                     <li><a href='#PropertiesFeatured' className='item-nav'>Property</a></li>
                     <li><a href='#agentes' className='item-nav'>Agents</a></li>
-                    <li><NavLink className={(navData) => navData.isActive ? 'item-nav active' : 'item-nav'} to='/'>Contact</NavLink></li>
+                    <li><a href='#contact' className='item-nav'>Contact</a></li>
                 </ul>
             </nav>
 
@@ -67,7 +67,7 @@ const Nav = ({setIsActived, isActive}) => {
                     <span className='count carStore'>{Car ? Car.length : '0'}</span>
                     <FiShoppingCart />
                 </div>
-                <div className='items-actions-nav userPorfile' onClick={goToPorfile}>
+                <div className='items-actions-nav userPorfile' id={location.pathname === `/Porfile/${user?.name}` ? 'active' : ''} onClick={goToPorfile}>
                     <BiUserPin />
                 </div>
                 <div className='items-actions-nav logout' onClick={handleLogout}>
