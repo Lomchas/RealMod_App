@@ -50,6 +50,7 @@
   border-radius: 50px;
   width: 35px;
   position: relative;
+  color: rgba(0, 0, 0, 0.309);
   transition: all .3s;
 }
 
@@ -58,10 +59,6 @@
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.309);
 }
 
-
-.container-nav .container-actions-nav .items-actions-nav {
-  color: rgba(0, 0, 0, 0.309);
-}
 
 .container-nav .container-actions-nav .carStore span {
   background: rgb(205, 205, 205);
@@ -73,6 +70,11 @@
   top: -13px;
   margin-left: 1rem;
 }
+.container-nav .container-actions-nav #active {
+  color: #00c194 !important;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.309);
+}
+
 .container-nav .container-actions-nav .favorites span {
   background: rgb(205, 205, 205);
   color: white;

@@ -1,5 +1,6 @@
 export const TypesUsers = {
     login: '[Login]: login',
     register: '[Register]: register',
-    logout: '[Logout]: logout'
+    logout: '[Logout]: logout',
+    list: '[List]: list'
 }

@@ -1,24 +1,23 @@
 import React from 'react'
 import './cardAgents.css'
 import contactIcon from '../Images/contactIcon.png'
-import proof from '../Images/proof.png'
 
 
-const CardAgent = () => {
+const CardAgent = ({Agent}) => {
   return (
     <div className='container-card-agent'>
         <div className='container-photo-agent'>
-            <img src={proof} alt='photo_Agent'/>
+            <img src={Agent?.image} alt='photo_Agent'/>
         </div>
         <div className='container-numb-listing-agent'>
-            <span className='listing-agent'>{`${'08'} Listing`}</span>
+            <span className='listing-agent'>{`${Agent?.listing} Listing`}</span>
         </div>
         <div className='container-info-agent'>
-            <h3 className='name-agent'>{`Andren Willium`}</h3>
-            <h3 className='name-agency'>{`Sweet Home`}</h3>
+            <h3 className='name-agent'>{Agent?.nombre}</h3>
+            <h3 className='name-agency'>{Agent?.agencia}</h3>
             <h3 className='contact-agent'>
                 <img src={contactIcon} alt='icon'/>
-                {`Call: ${'+123 456 78 90'}`}
+                {`Call: ${Agent?.tel}`}
             </h3>
         </div>
     </div>

@@ -6,13 +6,14 @@ import Banner from '../NavBar/Banner/Banner'
 import './home.css'
 
 
-const Home = () => {
+const Home = ({setIsActive}) => {  
   return (
     <div className='container-home'>
-      <Banner/>
-      <Featured/>
-      <Destacadas/>
-      <Agents/>
+      <Banner />
+      <Featured />
+      <Destacadas setIsActive={setIsActive} />
+      <Agents />
+      
     </div>
   )
 }

@@ -12,6 +12,7 @@ import smartHomes from './Images/smart-homes.svg'
 import KidsPlace from './Images/kids-playland.svg'
 import { Link } from 'react-router-dom';
 
+
 const Featured = () => {
     return (
         <div className='container-featured_listing'>
@@ -20,7 +21,7 @@ const Featured = () => {
             </div>
             <div className='container-properties'>
 
-                <Link className='Link-featured' to={`/Properties/${`featuredType`}`}>
+                <Link className='Link-featured' to={`/Properties/${`Parking_space`}`}>
                     <div className='card-property'>
                         <div className='container-img-card-property'>
                             <img src={parking} alt='img-card' />
@@ -34,7 +35,7 @@ const Featured = () => {
                     </div>
                 </Link>
 
-                <Link className='Link-featured' to={`/Properties/${`featuredType`}`}>
+                <Link className='Link-featured' to={`/Properties/${`Swimming_pool`}`}>
                     <div className='card-property'>
                         <div className='container-img-card-property'>
                             <img src={Swimming} alt='img-card' />
@@ -48,7 +49,7 @@ const Featured = () => {
                     </div>
                 </Link>
 
-                <Link className='Link-featured' to={`/Properties/${`featuredType`}`}>
+                <Link className='Link-featured' to={`/Properties/${`Private_security`}`}>
                     <div className='card-property'>
                         <div className='container-img-card-property'>
                             <img src={privateSecurity} alt='img-card' />
@@ -62,7 +63,7 @@ const Featured = () => {
                     </div>
                 </Link>
 
-                <Link className='Link-featured' to={`/Properties/${`featuredType`}`}>
+                <Link className='Link-featured' to={`/Properties/${`Medical_center`}`}>
                     <div className='card-property'>
                         <div className='container-img-card-property'>
                             <img src={MedicalCenter} alt='img-card' />
@@ -76,7 +77,7 @@ const Featured = () => {
                     </div>
                 </Link>
 
-                <Link className='Link-featured' to={`/Properties/${`featuredType`}`}>
+                <Link className='Link-featured' to={`/Properties/${`Library_area`}`}>
                     <div className='card-property'>
                         <div className='container-img-card-property'>
                             <img src={LibraryArea} alt='img-card' />
@@ -90,7 +91,7 @@ const Featured = () => {
                     </div>
                 </Link>
 
-                <Link className='Link-featured' to={`/Properties/${`featuredType`}`}>
+                <Link className='Link-featured' to={`/Properties/${`King_beds`}`}>
                     <div className='card-property'>
                         <div className='container-img-card-property'>
                             <img src={bedsKings} alt='img-card' />
@@ -104,7 +105,7 @@ const Featured = () => {
                     </div>
                 </Link>
 
-                <Link className='Link-featured' to={`/Properties/${`featuredType`}`}>
+                <Link className='Link-featured' to={`/Properties/${`Smart_home`}`}>
                     <div className='card-property'>
                         <div className='container-img-card-property'>
                             <img src={smartHomes} alt='img-card' />
@@ -118,7 +119,7 @@ const Featured = () => {
                     </div>
                 </Link>
 
-                <Link className='Link-featured' to={`/Properties/${`featuredType`}`}>
+                <Link className='Link-featured' to={`/Properties/${`Kids_playland`}`}>
                     <div className='card-property'>
                         <div className='container-img-card-property'>
                             <img src={KidsPlace} alt='img-card' />

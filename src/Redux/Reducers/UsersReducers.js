@@ -11,6 +11,10 @@ export const UserReducers = (state = initialState, action) => {
                 ...state,
                 user: [...state.user, action.payload]
             }
+        case TypesUsers.list:
+            return {
+                user: [action.payload]
+            }
         case TypesUsers.register:
             return {
                 ...state, 

@@ -1,10 +1,12 @@
 .container-card-agent{
     background: white;
     width: 260px;
+    height: 360px;
     position: relative;
     min-width: 260px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.333);
     transition: all .3s;
