@@ -1,6 +1,6 @@
 import React from 'react'
 import './nav.css'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { BsHeart } from "react-icons/bs";
 import { BiUserPin } from "react-icons/bi";
 import { FiShoppingCart } from "react-icons/fi";
@@ -10,6 +10,12 @@ import logo from '../../Images/Logo.png'
 
 
 const Nav = () => {
+    const navigate = useNavigate()
+    const goToAdd = () => {
+        navigate('/AddProperty')
+    }
+
+
     return (
         <div className='container-nav'>
 
@@ -46,7 +52,7 @@ const Nav = () => {
                 </div>
             </div>
 
-            <button className='admin-zone'>
+            <button className='admin-zone' onClick={goToAdd}>
                 <span type='button'>
                     <AiFillPlusCircle />
                 </span>
