@@ -71,7 +71,6 @@ const Properties = () => {
 
 
   useEffect(() => {
-    window.scrollTo({top: 0})
     FunctionFiltered()
     traerProperties()
   }, [location, FunctionFiltered, traerProperties])
