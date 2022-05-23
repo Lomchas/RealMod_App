@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import './modalCar.css'
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useSelector } from 'react-redux';
@@ -13,10 +13,10 @@ const ModalCar = ({isActive }) => {
         isActive(false)
     }
 
-    const handleTotalCar = () => {
+    const handleTotalCar = useCallback(() => {
         const prices = Car.map((property, index) => Number(property.property_price))
         setTotalCar(prices.reduce((previus, current, index) => previus + current, 0))
-    }
+    },[Car])
 
     const salirModalSpecial = ({ target }) => {
         const clase = target.className;
@@ -28,7 +28,7 @@ const ModalCar = ({isActive }) => {
    useEffect(() => {
     handleTotalCar()
      console.log(Car.length)
-   }, [Car])
+   }, [Car, handleTotalCar])
 
   return (
     <div className='container-modal' onClick={salirModalSpecial}>

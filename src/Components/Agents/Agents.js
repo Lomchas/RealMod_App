@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { actionListAgentsAsync } from '../../Redux/Actions/ActionAgents'
 import './agents.css'
@@ -9,14 +9,18 @@ const Agents = () => {
 
   const dispatch = useDispatch()
   const {Agents} = useSelector((store) => store.Agents)
-  const traerAgents = () => {
-    dispatch(actionListAgentsAsync())
-  }
+  const traerAgents = useCallback(
+    () => {
+      dispatch(actionListAgentsAsync())
+    },
+    [dispatch],
+  )
+  
 
 
   useEffect(() => {
     traerAgents()
-  }, [])
+  }, [traerAgents])
   
 
 

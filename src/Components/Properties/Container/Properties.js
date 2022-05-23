@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import CardProperty from '../Cards/CardProperty'
 import './properties.css'
 import title_parking_space from './Images/title-parking-space.png'
@@ -24,13 +24,13 @@ const Properties = () => {
   const {Properties} = useSelector((store) => store.Properties)
   const dispatch = useDispatch()
 
-  const traerProperties = () => {
+  const traerProperties = useCallback(() => {
     dispatch(actionListAsync())
-  }
+  },[dispatch])
 
 
 
-  const FunctionFiltered = () => {
+  const FunctionFiltered = useCallback(() => {
     switch (location.pathname) {
       case '/Properties/Parking_space':
         setPropertiesFiltered(Properties.filter((property) => property.parking_property === true))
@@ -67,14 +67,14 @@ const Properties = () => {
       default:
         break
     }
-  }
+  },[Properties, location.pathname])
 
 
   useEffect(() => {
     window.scrollTo({top: 0})
     FunctionFiltered()
     traerProperties()
-  }, [location])
+  }, [location, FunctionFiltered, traerProperties])
   
 
   return (
